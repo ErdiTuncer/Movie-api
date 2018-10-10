@@ -1,0 +1,13 @@
+<button class="closeButton" (click)="closeMe()">Sluit</button>
+<div class="container">
+  <h3>{{movie.title}}</h3>
+  <ul>
+    <li>Title:&nbsp;{{movie.original_title}}</li>
+    <li>Belongs to collection:&nbsp;{{movie.belongs_to_collection?.name}}</li>
+    <li>Release date:&nbsp;{{movie.release_date | date:'dd/MM/yyyy'}}</li>
+    <li>Genres:&nbsp;{{movie.genres | names }}</li>
+    <li>Languages:&nbsp;{{movie.spoken_languages | names}}</li>
+  </ul>
+  <p>{{movie.overview}}</p>
+  <a *ngIf="movie.homepage" target="_blank" href="{{movie.homepage}}">Visit original homepage</a>
+</div>

@@ -1,0 +1,51 @@
+<div class="search-header">
+  <div class="popup" *ngIf="selected" (click)="selected = null" >
+    <app-film-details [movie]="selected" (close)="selected = null"></app-film-details>
+  </div>
+  <div class="search">
+      <div class="label"><input [(ngModel)]="zoekString" (keyup.enter)="zoek()" type="text" /></div>
+      <button (click)="zoek()">Zoek</button>
+    <li>Resultaten: {{ movies.total_results }}</li>
+  </div>
+
+  <div class="menu">
+    <button class="buttons" (click)="showNumbers = !showNumbers">
+      {{showNumbers?'Show rating':'Show score'}}
+    </button>
+
+    <button (click)="showPics()">{{showPictures?'Hide pictures':'Show pictures'}}
+    </button>
+    <div>
+      <button class="button" *ngIf="movies.page > 1" (click)="zoek(movies.page - 1)">Previous</button>
+      <div class="label">Paginas:{{ movies.total_pages }}</div>
+      <button *ngIf="movies.page < movies.total_pages" (click)="zoek(movies.page + 1)">Next</button>
+    </div>
+  </div>
+
+</div>
+<div class="movie" *ngFor="let movie of movies?.results; let i=index; let odd=odd; let even=even;" [ngClass]="{ odd: odd, even: even, index: index }">
+
+  <div>
+    <h2>{{i+1}}. {{movie.title}}</h2>
+    <div>
+      <img src="{{movie.poster_path | tmdbImage }}" *ngIf="showPictures" class="picture" />
+      <div class="overview">{{movie.overview}}</div>
+    </div>
+    <div class="scorecontainer">
+      <span class="scoreLabel score">Score:</span>
+      <!--<span class="value score" [ngClass]="scoreCategorie(movie.vote_average)">{{score(movie.vote_average)}}</span>-->
+      <span class="value score" [ngClass]="movie.vote_average | rating">{{movie.vote_average | rating:showNumbers}} ({{movie.vote_count}} votes) </span>
+     <div>
+       <span class="scoreLabel score">Genre:</span>
+       <span>{{movie.genres | names}}</span>
+     </div>
+    </div>
+    <span><a  class="more" (click)="selected = movie">Meer informatie</a></span>
+  </div>
+
+</div>
+
+
+
+
+

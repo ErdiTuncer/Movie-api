@@ -1,0 +1,64 @@
+{
+  "adult": false,
+  "backdrop_path": "/f6Y2FXfowesJj4b62geo12355U9.jpg",
+  "belongs_to_collection": {
+    "id": 94602,
+    "name": "Puss in Boots Collection",
+    "poster_path": "/anHwj9IupRoRZZ98WTBvHpTiE6A.jpg",
+    "backdrop_path": "/feU1DWV5zMWxXUHJyAIk3dHRQ9c.jpg"
+  },
+  "budget": 0,
+  "genres": [
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+      "id": 10751,
+      "name": "Family"
+    }
+  ],
+  "homepage": "",
+  "id": 83201,
+  "imdb_id": "tt2268617",
+  "original_language": "en",
+  "original_title": "Puss in Boots: The Three Diablos",
+  "overview": "Puss in Boots is on a mission to recover the Princess' stolen ruby from the notorious French thief, Whisperer. Reluctantly accompanied by three little kittens, Three Diablos, Puss must tame them before they endanger the mission.",
+  "popularity": 4.579297,
+  "poster_path": "/3L1fUwF4RbnMIvXOt0KYFFwfm2y.jpg",
+  "production_companies": [
+    {
+      "name": "DreamWorks Animation",
+      "id": 521
+    }
+  ],
+  "production_countries": [
+    {
+      "iso_3166_1": "US",
+      "name": "United States of America"
+    }
+  ],
+  "release_date": "2012-02-24",
+  "revenue": 0,
+  "runtime": 13,
+  "spoken_languages": [
+    {
+      "iso_639_1": "en",
+      "name": "English"
+    }
+  ],
+  "status": "Released",
+  "tagline": "",
+  "title": "Puss in Boots: The Three Diablos",
+  "video": false,
+  "vote_average": 6.6,
+  "vote_count": 134
+}
